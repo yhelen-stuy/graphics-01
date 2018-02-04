@@ -1,9 +1,11 @@
-run:
-	go run picmaker.go
+all:
+	go build picmaker.go
 
-display:
+run:
+	./picmaker
 	convert img.ppm img.png
 	display img.png
 
 clean:
+	rm picmaker
 	rm img.ppm img.png
