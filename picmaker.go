@@ -18,7 +18,7 @@ func main() {
 
 	for i := 0; i < 500; i++ {
 		for j := 0; j < 500; j++ {
-			buffer.WriteString(fmt.Sprintf("%d %d %d\n", 255-i, 255-j, 255-i*j))
+			buffer.WriteString(fmt.Sprintf("%d %d %d\n", (255-i)%256, (255-j)%256, (255-i*j)%256))
 		}
 	}
 
